@@ -78,3 +78,12 @@ Thumbs.db
 *.iml
 *.swp
 *.swo
+
+
+# ebpf agent
+
+bin/
+*.o
+*.skel.h
+*.pb.go
+

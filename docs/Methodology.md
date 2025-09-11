@@ -6,12 +6,6 @@ Pre requisite:
 ls /sys/kernel/btf/vmlinux   # should exist
 ```
 
-then copy it next to BPF code 
-
-```bash
-cd /mnt/c/Users/user/Documents/Shafiqah/Project/eBPF
-cp /mnt/c/WINDOWS/system32/bpftool/src/vmlinux.h .
-```
 2. Install toolchain :
 
 - Ubuntu 22.04+
@@ -27,3 +21,8 @@ sudo apt install -y clang llvm make gcc pkg-config libelf-dev zlib1g-dev bpftool
 sudo mount -t debugfs debugfs /sys/kernel/debug || true
 ``` 
 
+2. Generate vmlinux.h (CO-RE type info)
+
+```bash
+bpftool btf dump file /sys/kernel/btf/vmlinux format c > bpf/vmlinux.h
+```

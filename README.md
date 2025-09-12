@@ -4,9 +4,6 @@ A lightweight, Kubernetes-native observability agent powered by eBPF for deep, l
 
 Deployed as a DaemonSet and managed via Helm/Flux (GitOps), it exposes per-pod / per-namespace / per-node metrics for platform reliability, SLO/SLA monitoring, and security anomaly detection.
 
-## Disclaimer
-Due to kernel risk, the current aim of this project is as a proof of concept prototype for my own personal exploration
-
 ## Features
 - Per-Pod Network Tracing : Inbound/outbound bytes & packets, connection counts, TCP retransmits, estimated latency percentiles (from kernel TCP info).
 
